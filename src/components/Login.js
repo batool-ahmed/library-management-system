@@ -1,10 +1,10 @@
 import { React, useContext, useState } from "react";
 
-function Login(){
+const Login = () => {
     return (
         <div>
             <div className="center ">
-                <h1>Manifest</h1>
+                <h1>Library Management System</h1>
                 <input className = "login-field" type = "email" placeholder='Email' name="email" onChange={(e) => {}}/>
                 <input className = "login-field" placeholder='Password' type = "password" name="password" onChange={(e) => {}}/>
                 <button className = "login-btn" onClick={() => {}} > Login</button>
