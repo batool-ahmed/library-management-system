@@ -1,0 +1,23 @@
+import { React, useEffect, useState, useRef, useContext } from 'react';
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import Home from './Home';
+import Login from './Login'
+
+function Navbar() {
+  return (
+    <div className='nab-wrapper'>
+      <BrowserRouter>
+        <nav className="nab">
+            <a className='nab-item'><NavLink to='/' target='_self'>Home</NavLink></a>
+            <a className='nab-item'><NavLink to='/login' target='_self'>Login</NavLink></a>
+        </nav>
+          
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/login' element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+    </div>
+  )
+}
+export default Navbar;
